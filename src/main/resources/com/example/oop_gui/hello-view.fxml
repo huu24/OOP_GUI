@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="fatherPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="374.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_gui.HelloController">
+   <children>
+      <ImageView fitHeight="47.0" fitWidth="46.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../lisa.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="43.0" fitWidth="27.0" layoutX="286.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../telephone-call.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="43.0" fitWidth="34.0" layoutX="326.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../video-call.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Mic" fitHeight="29.0" fitWidth="34.0" layoutX="343.0" layoutY="535.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../mic.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ChooseImage" fitHeight="29.0" fitWidth="39.0" layoutX="7.0" layoutY="535.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="textField" layoutX="44.0" layoutY="532.0" prefHeight="34.0" prefWidth="242.0" promptText="Your message..." style="-fx-background-radius: 15; -fx-border-radius: 15;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="sendButton" layoutX="288.0" layoutY="535.0" mnemonicParsing="false" onAction="#sendMessage" opacity="0.75" prefHeight="26.0" prefWidth="46.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-background-color: pink;" text="send" textAlignment="CENTER" textFill="#00aaff">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" layoutX="70.0" layoutY="12.0" prefHeight="18.0" prefWidth="30.0" text="LISA" textAlignment="CENTER" textFill="#ea3ebc">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="71.0" layoutY="36.0" text="online" textFill="#00ff3c" />
+      <Label alignment="CENTER" layoutX="13.0" layoutY="48.0" prefHeight="18.0" prefWidth="46.0" style="-fx-background-color: pink; -fx-background-radius: 30; -fx-border-radius: 30;" text="GF">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ScrollPane fx:id="messagePane" layoutY="78.0" prefHeight="447.0" prefWidth="374.0">
+         <content>
+            <VBox fx:id="messageContainer" prefHeight="443.0" prefWidth="370.0" />
+         </content>
+      </ScrollPane>
+      <Button layoutX="4.0" layoutY="532.0" mnemonicParsing="false" onAction="#chooseImage" opacity="0.01" prefHeight="34.0" prefWidth="34.0" text="Button" />
+      <Button fx:id="callVideo" layoutX="326.0" layoutY="21.0" mnemonicParsing="false" onAction="#callVideo" opacity="0.01" prefHeight="30.0" prefWidth="34.0" />
+      <Label fx:id="callingVideoLabel" layoutX="131.0" layoutY="31.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: pink;" text="video calling..." textAlignment="CENTER" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="call" layoutX="280.0" layoutY="18.0" mnemonicParsing="false" onAction="#call" opacity="0.01" prefHeight="34.0" prefWidth="34.0" text="Button" />
+      <Label fx:id="callingLabel" alignment="CENTER" layoutX="146.0" layoutY="31.0" prefHeight="27.0" prefWidth="81.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: pink;" text="calling..." textAlignment="CENTER" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="micLabel" alignment="CENTER" layoutX="124.0" layoutY="39.0" prefHeight="27.0" prefWidth="126.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: pink;" text="your mic is on" textAlignment="CENTER" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="339.0" layoutY="531.0" mnemonicParsing="false" onAction="#onMic" opacity="0.01" prefHeight="34.0" prefWidth="34.0" text="Button" />
+      <Label fx:id="pickImageLabel" alignment="CENTER" layoutX="113.0" layoutY="34.0" prefHeight="27.0" prefWidth="166.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: pink;" text="choose your image" textAlignment="CENTER" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
